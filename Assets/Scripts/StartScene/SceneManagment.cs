@@ -95,7 +95,7 @@ public class SceneManagment : MonoBehaviour
 
     IEnumerator FillSceneStack()
     {
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(1.0f);
         UpdateCurrentScene();
         Debug.Log(currentScene.name);
         sceneStack.Push(currentScene);
