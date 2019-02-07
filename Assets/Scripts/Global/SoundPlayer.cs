@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class SoundPlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public SoundCollection sounds;
+    private AudioSource audioSource;
+
+    private void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlaySound(int soundNumber)
     {
-        
+        audioSource.clip = sounds.sounds[soundNumber];
+        audioSource.Play();
     }
+
 }
